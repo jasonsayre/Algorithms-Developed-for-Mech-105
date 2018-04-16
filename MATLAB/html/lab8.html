@@ -1,0 +1,499 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>lab8</title><meta name="generator" content="MATLAB 9.2"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2017-11-10"><meta name="DC.source" content="lab8.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><pre class="codeinput">clc
+clear
+<span class="comment">%The above lines ensure a clean slate for creating variables and a new</span>
+<span class="comment">%script</span>
+
+<span class="comment">%Problem 1A</span>
+a=4*(pi)^2
+
+<span class="comment">%Problem 1B</span>
+A=[1 2 3]
+B=[4 5 6]
+C=[7 8 9]
+
+AA=sum(A)
+BB=sum(B)
+CC=sum(C)
+<span class="comment">%The above 3 lines take the sum of the matrices stored in the defined</span>
+<span class="comment">%variables: A,B,C and redefines them to the respective variables: AA,BB,CC</span>
+Product=AA*BB*CC
+
+<span class="comment">%Problem 1C</span>
+e=exp(1)
+<span class="comment">%the above line defines the variable e which is used in the line below</span>
+avrg=mean(2.1*[5; 17; 18]+[e; 5^(.5);1.27^(2.2)])
+
+<span class="comment">%Problem 1D</span>
+A1=[1 0 1 0; 0 0 1 0; 1 1 0 1; 0 1 0 0]
+B2=[A1 A1 A1 A1 A1 A1]
+C3=[A1; A1; A1; A1; A1; A1]
+D=C3*B2
+<span class="comment">%The above 4 lines are all variables that hold contents provided to us in</span>
+<span class="comment">%the lab 8 pdf file</span>
+E=nnz(D)
+<span class="comment">%The line above takes the contents stored in the variable D and calculates</span>
+<span class="comment">%how many nonzero values exist then redefines that calculation in the</span>
+<span class="comment">%variable E</span>
+
+<span class="comment">%Problem 2</span>
+array1 = randi(5,1,100)
+<span class="comment">%in the parenthesis above the 5 indicates the max value of the integers</span>
+<span class="comment">%being created. the default minimum integer value is 1.</span>
+<span class="comment">%the 1 indicated the amount of rows being created in the array</span>
+<span class="comment">%the 100 indicated the amount of collumns being created in the array</span>
+histogram(array1,10)
+<span class="comment">%the above line creates a histogram using the values generated in the array</span>
+<span class="comment">%the number 10 indicates we want 10 bins</span>
+avgarr1=mean(array1)
+<span class="comment">%the above line calculates the mean value of all the values generated in</span>
+<span class="comment">%the array.</span>
+
+<span class="comment">%Problem 3</span>
+filename=<span class="string">'lab6data.xls'</span>
+<span class="comment">%the line above sets the variable called filename to reference the excel</span>
+<span class="comment">%file saves as lab6data</span>
+sheet=1
+<span class="comment">%the line above indicates that within the excel file we want to reference</span>
+<span class="comment">%the first sheet</span>
+
+xlRange1=<span class="string">'A98:A169'</span>
+xlRange2=<span class="string">'B98:B167'</span>
+xlRange3=<span class="string">'C98:C163'</span>
+<span class="comment">%the above lines indicate the range of cells from the excel document we want to</span>
+<span class="comment">%reference for each indicated 'run'. It saves the parameters for ech run in</span>
+<span class="comment">%the respected variables listed above represented run 1, 2 and 3</span>
+
+accA= xlsread(filename,sheet,xlRange1);
+MaxaccA= max(accA)
+<span class="comment">%The above 2 lines utilize the variables we specified above with the first range variable and then uses</span>
+<span class="comment">%the xlsread function to pull the data from the excel document into matlab.</span>
+<span class="comment">%It indicates to save this data in the variable accA, representing the first run, and then proceeds to</span>
+<span class="comment">%analyze that data to find the maximum acceleration value that exists. It</span>
+<span class="comment">%takes this maximum accereration value and stores it in the variable</span>
+<span class="comment">%MaxaccA</span>
+
+accB= xlsread(filename,sheet,xlRange2);
+MaxaccB= max(accB)
+<span class="comment">%The above 2 lines utilize the variables we specified above with the second range variable and then uses</span>
+<span class="comment">%the xlsread function to pull the data from the excel document into matlab.</span>
+<span class="comment">%It indicates to save this data in the variable accB, representing the second run, and then proceeds to</span>
+<span class="comment">%analyze that data to find the maximum acceleration value that exists. It</span>
+<span class="comment">%takes this maximum accereration value and stores it in the variable</span>
+<span class="comment">%MaxaccB</span>
+
+accC= xlsread(filename,sheet,xlRange3);
+MaxaccC= max(accC)
+<span class="comment">%The above 2 lines utilize the variables we specified above with the third range variable and then uses</span>
+<span class="comment">%the xlsread function to pull the data from the excel document into matlab.</span>
+<span class="comment">%It indicates to save this data in the variable accC, representing the third run, and then proceeds to</span>
+<span class="comment">%analyze that data to find the maximum acceleration value that exists. It</span>
+<span class="comment">%takes this maximum accereration value and stores it in the variable</span>
+<span class="comment">%MaxaccC</span>
+</pre><pre class="codeoutput">
+a =
+
+   39.4784
+
+
+A =
+
+     1     2     3
+
+
+B =
+
+     4     5     6
+
+
+C =
+
+     7     8     9
+
+
+AA =
+
+     6
+
+
+BB =
+
+    15
+
+
+CC =
+
+    24
+
+
+Product =
+
+        2160
+
+
+e =
+
+    2.7183
+
+
+avrg =
+
+   30.2154
+
+
+A1 =
+
+     1     0     1     0
+     0     0     1     0
+     1     1     0     1
+     0     1     0     0
+
+
+B2 =
+
+  Columns 1 through 13
+
+     1     0     1     0     1     0     1     0     1     0     1     0     1
+     0     0     1     0     0     0     1     0     0     0     1     0     0
+     1     1     0     1     1     1     0     1     1     1     0     1     1
+     0     1     0     0     0     1     0     0     0     1     0     0     0
+
+  Columns 14 through 24
+
+     0     1     0     1     0     1     0     1     0     1     0
+     0     1     0     0     0     1     0     0     0     1     0
+     1     0     1     1     1     0     1     1     1     0     1
+     1     0     0     0     1     0     0     0     1     0     0
+
+
+C3 =
+
+     1     0     1     0
+     0     0     1     0
+     1     1     0     1
+     0     1     0     0
+     1     0     1     0
+     0     0     1     0
+     1     1     0     1
+     0     1     0     0
+     1     0     1     0
+     0     0     1     0
+     1     1     0     1
+     0     1     0     0
+     1     0     1     0
+     0     0     1     0
+     1     1     0     1
+     0     1     0     0
+     1     0     1     0
+     0     0     1     0
+     1     1     0     1
+     0     1     0     0
+     1     0     1     0
+     0     0     1     0
+     1     1     0     1
+     0     1     0     0
+
+
+D =
+
+  Columns 1 through 13
+
+     2     1     1     1     2     1     1     1     2     1     1     1     2
+     1     1     0     1     1     1     0     1     1     1     0     1     1
+     1     1     2     0     1     1     2     0     1     1     2     0     1
+     0     0     1     0     0     0     1     0     0     0     1     0     0
+     2     1     1     1     2     1     1     1     2     1     1     1     2
+     1     1     0     1     1     1     0     1     1     1     0     1     1
+     1     1     2     0     1     1     2     0     1     1     2     0     1
+     0     0     1     0     0     0     1     0     0     0     1     0     0
+     2     1     1     1     2     1     1     1     2     1     1     1     2
+     1     1     0     1     1     1     0     1     1     1     0     1     1
+     1     1     2     0     1     1     2     0     1     1     2     0     1
+     0     0     1     0     0     0     1     0     0     0     1     0     0
+     2     1     1     1     2     1     1     1     2     1     1     1     2
+     1     1     0     1     1     1     0     1     1     1     0     1     1
+     1     1     2     0     1     1     2     0     1     1     2     0     1
+     0     0     1     0     0     0     1     0     0     0     1     0     0
+     2     1     1     1     2     1     1     1     2     1     1     1     2
+     1     1     0     1     1     1     0     1     1     1     0     1     1
+     1     1     2     0     1     1     2     0     1     1     2     0     1
+     0     0     1     0     0     0     1     0     0     0     1     0     0
+     2     1     1     1     2     1     1     1     2     1     1     1     2
+     1     1     0     1     1     1     0     1     1     1     0     1     1
+     1     1     2     0     1     1     2     0     1     1     2     0     1
+     0     0     1     0     0     0     1     0     0     0     1     0     0
+
+  Columns 14 through 24
+
+     1     1     1     2     1     1     1     2     1     1     1
+     1     0     1     1     1     0     1     1     1     0     1
+     1     2     0     1     1     2     0     1     1     2     0
+     0     1     0     0     0     1     0     0     0     1     0
+     1     1     1     2     1     1     1     2     1     1     1
+     1     0     1     1     1     0     1     1     1     0     1
+     1     2     0     1     1     2     0     1     1     2     0
+     0     1     0     0     0     1     0     0     0     1     0
+     1     1     1     2     1     1     1     2     1     1     1
+     1     0     1     1     1     0     1     1     1     0     1
+     1     2     0     1     1     2     0     1     1     2     0
+     0     1     0     0     0     1     0     0     0     1     0
+     1     1     1     2     1     1     1     2     1     1     1
+     1     0     1     1     1     0     1     1     1     0     1
+     1     2     0     1     1     2     0     1     1     2     0
+     0     1     0     0     0     1     0     0     0     1     0
+     1     1     1     2     1     1     1     2     1     1     1
+     1     0     1     1     1     0     1     1     1     0     1
+     1     2     0     1     1     2     0     1     1     2     0
+     0     1     0     0     0     1     0     0     0     1     0
+     1     1     1     2     1     1     1     2     1     1     1
+     1     0     1     1     1     0     1     1     1     0     1
+     1     2     0     1     1     2     0     1     1     2     0
+     0     1     0     0     0     1     0     0     0     1     0
+
+
+E =
+
+   396
+
+
+array1 =
+
+  Columns 1 through 13
+
+     1     4     2     3     1     4     2     4     4     4     3     1     2
+
+  Columns 14 through 26
+
+     5     1     5     3     5     1     3     1     5     1     4     5     5
+
+  Columns 27 through 39
+
+     1     2     2     5     3     5     1     2     1     1     5     3     3
+
+  Columns 40 through 52
+
+     1     5     4     2     3     3     1     2     1     1     2     3     1
+
+  Columns 53 through 65
+
+     5     5     3     3     2     5     2     1     4     2     2     3     1
+
+  Columns 66 through 78
+
+     1     5     5     3     1     2     2     5     1     1     1     4     4
+
+  Columns 79 through 91
+
+     4     3     3     2     4     1     4     1     2     4     4     1     5
+
+  Columns 92 through 100
+
+     4     3     3     3     2     3     3     5     4
+
+
+avgarr1 =
+
+    2.8300
+
+
+filename =
+
+    'lab6data.xls'
+
+
+sheet =
+
+     1
+
+
+xlRange1 =
+
+    'A98:A169'
+
+
+xlRange2 =
+
+    'B98:B167'
+
+
+xlRange3 =
+
+    'C98:C163'
+
+
+MaxaccA =
+
+   42.4000
+
+
+MaxaccB =
+
+   15.3000
+
+
+MaxaccC =
+
+    17
+
+</pre><img vspace="5" hspace="5" src="lab8_01.png" style="width:560px;height:420px;" alt=""> <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2017a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+clc
+clear
+%The above lines ensure a clean slate for creating variables and a new
+%script
+
+%Problem 1A
+a=4*(pi)^2
+
+%Problem 1B
+A=[1 2 3]
+B=[4 5 6]
+C=[7 8 9]
+
+AA=sum(A)
+BB=sum(B)
+CC=sum(C)
+%The above 3 lines take the sum of the matrices stored in the defined 
+%variables: A,B,C and redefines them to the respective variables: AA,BB,CC 
+Product=AA*BB*CC
+
+%Problem 1C
+e=exp(1)
+%the above line defines the variable e which is used in the line below
+avrg=mean(2.1*[5; 17; 18]+[e; 5^(.5);1.27^(2.2)]) 
+
+%Problem 1D
+A1=[1 0 1 0; 0 0 1 0; 1 1 0 1; 0 1 0 0]
+B2=[A1 A1 A1 A1 A1 A1]
+C3=[A1; A1; A1; A1; A1; A1]
+D=C3*B2
+%The above 4 lines are all variables that hold contents provided to us in
+%the lab 8 pdf file
+E=nnz(D) 
+%The line above takes the contents stored in the variable D and calculates
+%how many nonzero values exist then redefines that calculation in the
+%variable E
+
+%Problem 2
+array1 = randi(5,1,100)
+%in the parenthesis above the 5 indicates the max value of the integers
+%being created. the default minimum integer value is 1.
+%the 1 indicated the amount of rows being created in the array
+%the 100 indicated the amount of collumns being created in the array
+histogram(array1,10)
+%the above line creates a histogram using the values generated in the array
+%the number 10 indicates we want 10 bins
+avgarr1=mean(array1)
+%the above line calculates the mean value of all the values generated in
+%the array.
+
+%Problem 3
+filename='lab6data.xls'
+%the line above sets the variable called filename to reference the excel
+%file saves as lab6data
+sheet=1
+%the line above indicates that within the excel file we want to reference
+%the first sheet
+
+xlRange1='A98:A169'
+xlRange2='B98:B167'
+xlRange3='C98:C163'
+%the above lines indicate the range of cells from the excel document we want to
+%reference for each indicated 'run'. It saves the parameters for ech run in
+%the respected variables listed above represented run 1, 2 and 3
+
+accA= xlsread(filename,sheet,xlRange1);
+MaxaccA= max(accA)
+%The above 2 lines utilize the variables we specified above with the first range variable and then uses
+%the xlsread function to pull the data from the excel document into matlab.
+%It indicates to save this data in the variable accA, representing the first run, and then proceeds to
+%analyze that data to find the maximum acceleration value that exists. It
+%takes this maximum accereration value and stores it in the variable
+%MaxaccA
+
+accB= xlsread(filename,sheet,xlRange2);
+MaxaccB= max(accB)
+%The above 2 lines utilize the variables we specified above with the second range variable and then uses
+%the xlsread function to pull the data from the excel document into matlab.
+%It indicates to save this data in the variable accB, representing the second run, and then proceeds to
+%analyze that data to find the maximum acceleration value that exists. It
+%takes this maximum accereration value and stores it in the variable
+%MaxaccB
+
+accC= xlsread(filename,sheet,xlRange3);
+MaxaccC= max(accC)  
+%The above 2 lines utilize the variables we specified above with the third range variable and then uses
+%the xlsread function to pull the data from the excel document into matlab.
+%It indicates to save this data in the variable accC, representing the third run, and then proceeds to
+%analyze that data to find the maximum acceleration value that exists. It
+%takes this maximum accereration value and stores it in the variable
+%MaxaccC
+##### SOURCE END #####
+--></body></html>
